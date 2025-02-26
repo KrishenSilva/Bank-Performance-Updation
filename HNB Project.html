@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <script src="C:\Users\krish\hnb-employee-app\hnb\scripts.js"></script>
+    <script src="C:\Users\krish\hnb-employee-app\hnb\server1.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNB Branch Performance</title>
+    <link rel="stylesheet" href="C:\Users\krish\hnb-employee-app\hnb\HNB.css">
+    <script src="C:\Users\krish\hnb-employee-app\hnb\HNB.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="welcome-container">
+            <h1>Welcome HNB Jaela Branch</h1>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <b>
+                    <font face='"Poppins", sans-serif' color="#f7dc6f" size="6">
+                        <p align="center">Welcome All Ja-ela Branch Members</p>
+
+                    </font>
+                </b>
+                <ul class="menu">
+                    <button class="button">
+                        <li><a href="#product-managers">Product Managers</a></li>
+                    </button>
+
+                    <button class="button">
+                        <li><a href="#Products">Products</a></li>
+                    </button>
+
+                    <button class="button">
+                        <li><a href="#performance">Branch Performance</a></li>
+                    </button>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="search">
+                <h1>Employee Performance Dashboard</h1>
+                <input type="text" id="employee-id" placeholder="Enter Employee ID">
+                <button onclick="searchEmployee()">Search</button>
+            </section>
+
+            <section id="employee-details">
+                <!-- Employee details will be dynamically loaded here -->
+            </section>
+
+            <section id="summary">
+                <h2>Branch Summary</h2>
+                <div id="summary-data">
+                    <!-- Summary data dynamically loaded here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 HNB Bank - Jaela Branch</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Show the loading screen for 3 seconds, then display the main content
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 3000);
+        };
+    </script>
+</body>
+
+</html>
